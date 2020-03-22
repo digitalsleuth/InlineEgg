@@ -1,3 +1,7 @@
+PROJECT NO LONGER MAINTAINED BY CoreSecurity\
+This repo is a clone from https://github.com/radare/toys
+Created a separate repo for addition into dockers.
+
 Welcome to InlineEgg.
 http://oss.coresecurity.com/InlineEgg/
 
@@ -55,7 +59,7 @@ A simple idea: Do something that lets us create small assembly programs by
 
    or probably more complex things, but still eggs.
 
-    Let me talk just a little about eggs. Eggs are the code an exploit sends
+Let me talk just a little about eggs. Eggs are the code an exploit sends
 to, and executes in its target. As any other code, eggs could be written in any
 programing language, could be small, big, be self contained or use libraries,
 etc. Eggs have been written in assembly for historical reasons, and mainly
@@ -65,24 +69,24 @@ hardening measures are slowly becoming more widely used, or because IDSes
 detect eggs instead of the underlying bug. The need for "smarter", and
 dynamically created eggs is flowing in the air.
 
-    Just a few words about what a shellcode is: a shellcode is an egg that
+Just a few words about what a shellcode is: a shellcode is an egg that
 executes a shell, but as eggs evolved into more advanced programs, it's not
 fair to simply call them shellcodes anymore.
 
-	 InlineEgg comes to fill a small gap, not all. It can only create simple
+InlineEgg comes to fill a small gap, not all. It can only create simple
 eggs that use system calls, and have simple logic and simple variables, nothing
 complex. It was not created to fulfill every need, it was actually created as
 an experiment, looking for something different, playing with a few ideas,
 trying to keep it simple but still useful, nothing really serious.
 
-    As every other software, it's not finished: there are always plenty of
+As every other software, it's not finished: there are always plenty of
 things to add, change, discard, redo and rethink, but still, after sitting on
 it for more than a year, and after approaching a nearly usable stage, it's
 ready to see the light.  So, ladies and gentlemen, here with you, to use at
 no charge, InlineEgg... another idea that was flowing in the air and condensed
 into code.
 
-    First, some simple examples of how to use it (oh, yes! python! didn't I say
+First, some simple examples of how to use it (oh, yes! python! didn't I say
 it?), the example are to be read and to learn how to use the library from them.
 Not only to be cut & pasted :-)
 
@@ -95,9 +99,9 @@ import struct
 import sys
 
 def stdinShellEgg():
-#   egg = InlineEgg(FreeBSDx86Syscall)
-#   egg = InlineEgg(OpenBSDx86Syscall)
-   egg = InlineEgg(Linuxx86Syscall)
+#egg = InlineEgg(FreeBSDx86Syscall)
+#egg = InlineEgg(OpenBSDx86Syscall)
+ egg = InlineEgg(Linuxx86Syscall)
 
    egg.setuid(0)
    egg.setgid(0)
